@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Coautores 360 -</title>
+    <!-- Enlace a la hoja de estilos CSS externa -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Opcional: Enlace a Font Awesome para iconos (descomentar si se usa) -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+</head>
+<body>
+
+    <!-- HEADER SECTION -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Blog Coautores 360</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Inicio</a></li>
+                <li><a href="#publications">Publicaciones</a></li>
+                <!-- Eliminado el enlace a Coautores -->
+                <li><a href="#about">Acerca de</a></li>
+            </ul>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT SECTIONS -->
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Coautores 360: Semillero Cientifico</h1>
+                <p>Explora nuestras investigaciones y conoce a los talentosos científicos detrás de cada descubrimiento.</p>
+                <a href="#publications" class="button">Explorar Publicaciones</a>
+            </div>
+        </section>
+
+        <!-- PUBLICATIONS SECTION -->
+        <section id="publications" class="section-padding">
+            <h2>Nuestras Publicaciones Destacadas</h2>
+            <div class="filter-controls">
+                <input type="text" id="search-input" placeholder="Buscar publicaciones...">
+                <select id="year-filter">
+                    <option value="">Todos los Años</option>
+                    <!-- Las opciones de año se generarán con JavaScript -->
+                </select>
+                <select id="keyword-filter">
+                    <option value="">Todas las Áreas</option>
+                    <!-- Las opciones de palabras clave se generarán con JavaScript -->
+                </select>
+            </div>
+            <!-- Contenedor donde JavaScript inyectará las tarjetas de los artículos -->
+            <div class="articles-container" id="articles-container">
+                <!-- Las tarjetas de artículos se cargarán aquí dinámicamente con JS -->
+                <p>Cargando publicaciones...</p>
+            </div>
+        </section>
+
+        <!-- COAUTHORS SECTION (Eliminada, pero el ID y el contenido JS relacionado se mantienen para evitar errores si se hace referencia) -->
+        <!-- <section id="coauthors" class="section-padding">
+            <h2>Conoce a Nuestros Coautores</h2>
+            <div class="coauthors-container" id="coauthors-container">
+                <p>Cargando coautores...</p>
+            </div>
+        </section> -->
+
+        <!-- ABOUT SECTION -->
+        <section id="about" class="section-padding">
+            <h2>Nuestra Misión</h2>
+            <p>La iniciativa "Coautores 360" nace del profundo reconocimiento al valor incalculable de la colaboración en la investigación científica. Creemos firmemente que los avances más significativos son el resultado del esfuerzo conjunto y la diversidad de perspectivas. Esta plataforma es un homenaje a cada mente brillante que ha contribuido a nuestras publicaciones, ofreciendo un espacio interactivo para explorar el impacto de nuestra ciencia y la riqueza de nuestras redes de colaboración.</p>
+
+            <div class="about-me">
+                <!-- Eliminado: <img src="https://via.placeholder.com/150x150?text=Tu+Foto" alt="Tu Foto de Perfil" class="profile-picture"> -->
+                <h3>Coautores 360, Nuestra Historia</h3>
+                <p>Daniel Sánchez Knupflemacher es un joven innovador, estudiante de medicina, emprendedor científico y líder académico que ha transformado la manera en que los estudiantes acceden a la publicación científica. Con decenas de artículos publicados y una visión clara sobre la democratización del conocimiento, fundó Coautores 360, una iniciativa que ha abierto las puertas de la investigación a cientos de estudiantes sin necesidad de esperar hasta el internado o depender de mentores inaccesibles.
+                Coautores 360 es mucho más que una plataforma de escritura colaborativa: es un movimiento académico que ha permitido a más de 80 estudiantes publicar su primer artículo científico, muchos de ellos en revistas indexadas en bases como Latindex, con temas que van desde medicina interna y cirugía plástica hasta neurociencia y salud pública.
+                Con un enfoque inclusivo, práctico y formativo, Coautores 360 guía a los participantes paso a paso en el proceso de investigación, redacción, revisión por pares y publicación. Gracias a su metodología, universidades como Anáhuac, Westhill y Saint Luke ya forman parte de esta comunidad de coautores en expansión nacional.
+                Daniel y su equipo han demostrado que con visión, ética y colaboración, los estudiantes pueden convertirse en autores y agentes de cambio en el ámbito científico desde una etapa temprana.</p>
+                <!-- Opcional: Enlaces a tus perfiles personales/profesionales -->
+                <!-- <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-researchgate"></i> ResearchGate</a>
+                    <a href="#" target="_blank"><i class="fab fa-orcid"></i> ORCID</a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div> -->
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>&copy; 2025 Blog Coautores 360. Todos los derechos reservados.</p>
+        <div class="social-links-footer">
+            <!-- Placeholders para iconos de redes sociales (ej. Font Awesome) -->
+            <!-- <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a> -->
+            <a href="mailto:danielsanchezknu@gmail.com">danielsanchezknu@gmail.com</a>
+        </div>
+    </footer>
+
+    <!-- MODALES (Ventanas Emergentes) -->
+
+    <!-- Modal para Detalles del Artículo -->
+    <div id="article-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modal-article-title">Título del Artículo</h3>
+            <p id="modal-article-authors">Autores: </p>
+            <p id="modal-article-journal-year">Revista, Año: </p>
+            <img id="modal-article-image" src="" alt="Imagen del Artículo" class="modal-image">
+            <h4>Resumen</h4>
+            <p id="modal-article-abstract">Resumen del artículo...</p>
+            <h4>Puntos Clave</h4>
+            <ul id="modal-article-keypoints">
+                <!-- Puntos clave se inyectarán aquí -->
+            </ul>
+            <h4>Enlaces</h4>
+            <div id="modal-article-links" class="modal-links">
+                <!-- Botones de enlaces se inyectarán aquí -->
+            </div>
+            <h4>Coautores de este Artículo</h4>
+            <div id="modal-article-coauthors" class="modal-coauthors-list">
+                <!-- Coautores del artículo se inyectarán aquí -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Detalles del Coautor (se mantiene la estructura aunque la sección principal haya sido eliminada, por si se usa en el futuro o para la lógica de navegación entre modales) -->
+    <div id="coauthor-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-coauthor-image" src="" alt="Foto del Coautor" class="modal-profile-picture">
+            <h3 id="modal-coauthor-name">Nombre del Coautor</h3>
+            <p id="modal-coauthor-affiliation">Afiliación: </p>
+            <h4>Biografía</h4>
+            <p id="modal-coauthor-bio">Biografía del coautor...</p>
+            <h4>Enlaces Externos</h4>
+            <div id="modal-coauthor-external-links" class="modal-links">
+                <!-- Enlaces externos se inyectarán aquí -->
+            </div>
+            <h4>Publicaciones Conjuntas</h4>
+            <ul id="modal-coauthor-publications">
+                <!-- Publicaciones conjuntas se inyectarán aquí -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- SCRIPT DE JAVASCRIPT -->
+    <script>
+        // Array con los datos de tus artículos científicos
+        // Aquí es donde puedes agregar, modificar o eliminar tus publicaciones.
+        const articlesData = [
+            {
+                id: 'articulo-1',
+                title: 'Uso de Inhibidores del Cotransportador Sodio-Glucosa Tipo 2 (iSGLT2) en Pacientes No Diabéticos con Insuficiencia Cardíaca con Fracción de Eyección Reducida: Revisión Sistemática',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Este espacio debe contener un resumen conciso de los objetivos, métodos, resultados y conclusiones del artículo.',
+                keywords: ['iSGLT2', 'insuficiencia cardiaca', 'no diabéticos', 'revisión sistemática'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Evaluación del uso de iSGLT2 en pacientes no diabéticos.',
+                    'Análisis de su impacto en la insuficiencia cardíaca con FE reducida.',
+                    'Revisión de la evidencia clínica disponible.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/615',
+                    pdfDownload: ''
+                },
+                coauthors: ['daniel-sanchez-knupflemacher-id', 'jose-antonio-sanchez-lopez-id'] // Ejemplo: Asigna coautores relevantes
+            },
+            {
+                id: 'articulo-2',
+                title: 'Psicosis Post-COVID: Revisión de Casos y Evidencia',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Este artículo revisa los casos reportados y la evidencia sobre la aparición de psicosis después de una infección por COVID-19.',
+                keywords: ['psicosis', 'COVID-19', 'salud mental', 'revisión de casos'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Identificación de patrones de psicosis post-COVID.',
+                    'Análisis de posibles mecanismos fisiopatológicos.',
+                    'Implicaciones para el diagnóstico y tratamiento.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/616',
+                    pdfDownload: ''
+                },
+                coauthors: ['xavier-antonio-sanchez-garcia-id', 'frida-alvarez-ovando-id']
+            },
+            {
+                id: 'articulo-3',
+                title: 'Uso de Ketamina Intranasal en Depresión Resistente: Evidencia Clínica y Perspectivas Terapéuticas',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Exploración de la eficacia y seguridad de la ketamina intranasal como opción terapéutica para la depresión resistente.',
+                keywords: ['ketamina', 'depresión resistente', 'terapias emergentes', 'psiquiatría'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Revisión de ensayos clínicos con ketamina intranasal.',
+                    'Evaluación de su perfil de seguridad.',
+                    'Discusión sobre su rol en el manejo de la depresión severa.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/617',
+                    pdfDownload: ''
+                },
+                coauthors: ['daniel-sanchez-knupflemacher-id']
+            },
+            {
+                id: 'articulo-4',
+                title: 'Uso de Antagonistas del Receptor Mineralocorticoide en Pacientes con Insuficiencia Cardíaca con Fracción de Eyección Preservada: ¿Evidencia Suficiente para su Uso Clínico?',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Este estudio evalúa la evidencia actual sobre el uso de ARM en pacientes con insuficiencia cardíaca con FE preservada.',
+                keywords: ['antagonistas receptor mineralocorticoide', 'insuficiencia cardíaca', 'FE preservada', 'cardiología'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Análisis de la eficacia de ARM en HFpEF.',
+                    'Revisión de los resultados de ensayos clínicos.',
+                    'Consideraciones para la práctica clínica.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/618',
+                    pdfDownload: ''
+                },
+                coauthors: ['jose-antonio-sanchez-lopez-id']
+            },
+            {
+                id: 'articulo-5',
+                title: 'Infecciones asociadas a biopolímeros: revisión sistemática del enfoque quirúrgico y reconstructivo',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Revisión de las estrategias quirúrgicas y reconstructivas para el manejo de infecciones relacionadas con biopolímeros.',
+                keywords: ['infecciones', 'biopolímeros', 'cirugía reconstructiva', 'estética'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Clasificación y diagnóstico de infecciones por biopolímeros.',
+                    'Técnicas quirúrgicas para la remoción.',
+                    'Opciones reconstructivas post-extracción.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/644',
+                    pdfDownload: ''
+                },
+                coauthors: ['aline-salgado-sanchez-id']
+            },
+            {
+                id: 'articulo-6',
+                title: 'Eje Intestino-Cerebro y Salud Mental: Revisión Sistematica del Rol del Microbioma en la Regulación Emocional',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Este estudio explora la conexión bidireccional entre el intestino y el cerebro y cómo el microbioma influye en la salud mental.',
+                keywords: ['intestino-cerebro', 'salud mental', 'microbioma', 'regulación emocional'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Mecanismos de comunicación intestino-cerebro.',
+                    'Impacto del microbioma en trastornos del estado de ánimo.',
+                    'Potenciales intervenciones terapéuticas.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/643',
+                    pdfDownload: ''
+                },
+                coauthors: ['jessica-guadalupe-vargas-becerril-id']
+            },
+            {
+                id: 'articulo-7',
+                title: 'Tendencias actuales del lifting facial profundo: revisión de técnicas quirúrgicas',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Revisión de las técnicas más recientes y efectivas en el lifting facial profundo para resultados más naturales y duraderos.',
+                keywords: ['lifting facial', 'cirugía estética', 'técnicas quirúrgicas', 'rejuvenecimiento'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Evolución de las técnicas de lifting facial.',
+                    'Ventajas del lifting profundo.',
+                    'Consideraciones pre y postoperatorias.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/646',
+                    pdfDownload: ''
+                },
+                coauthors: ['aline-salgado-sanchez-id']
+            },
+            {
+                id: 'articulo-8',
+                title: '¿Es efectiva la toxina botulínica en la cefalea tensional crónica? Revisión sistemática de la evidencia clínica reciente',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Este estudio analiza la evidencia actual sobre la eficacia de la toxina botulínica en el tratamiento de la cefalea tensional crónica.',
+                keywords: ['toxina botulínica', 'cefalea tensional', 'neurología', 'tratamiento del dolor'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Mecanismos de acción de la toxina botulínica en cefaleas.',
+                    'Resultados de ensayos clínicos y metaanálisis.',
+                    'Indicaciones y contraindicaciones.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/645',
+                    pdfDownload: ''
+                },
+                coauthors: ['frida-alvarez-ovando-id']
+            },
+            {
+                id: 'articulo-9',
+                title: 'Resultados clínicos de bioestimuladores faciales: revisión sistemática de la evidencia sobre Sculptra®, Radiesse® y HarmonyCA®',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Revisión de la evidencia clínica sobre la efectividad y seguridad de los principales bioestimuladores faciales.',
+                keywords: ['bioestimuladores', 'estética facial', 'Sculptra', 'Radiesse', 'HarmonyCA', 'dermatología'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Mecanismos de acción de los bioestimuladores.',
+                    'Resultados estéticos y durabilidad.',
+                    'Comparación entre diferentes productos.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/658',
+                    pdfDownload: ''
+                },
+                coauthors: ['aline-salgado-sanchez-id']
+            },
+            {
+                id: 'articulo-10',
+                title: 'Uso de agonistas del receptor GLP-1 en adultos sin diabetes para reducir eventos cardiovasculares mayores: revisión sistemática de la evidencia clínica',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Este estudio analiza la utilidad de los agonistas GLP-1 en la prevención de eventos cardiovasculares en pacientes no diabéticos.',
+                keywords: ['agonistas GLP-1', 'eventos cardiovasculares', 'no diabetes', 'cardiología'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Efectos cardiovasculares de los agonistas GLP-1.',
+                    'Población objetivo y criterios de inclusión.',
+                    'Implicaciones para la prevención primaria.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/659',
+                    pdfDownload: ''
+                },
+                coauthors: ['jose-antonio-sanchez-lopez-id']
+            },
+            {
+                id: 'articulo-11',
+                title: 'Terapias emergentes para la enfermedad de Alzheimer: revisión sistemática de anticuerpos anti-amiloide y mecanismos alternativos',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Revisión de las últimas terapias dirigidas a la enfermedad de Alzheimer, incluyendo anticuerpos anti-amiloide y otras vías.',
+                keywords: ['Alzheimer', 'terapias emergentes', 'anti-amiloide', 'neurociencia'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Mecanismos de acción de las nuevas terapias.',
+                    'Resultados de ensayos clínicos fase II/III.',
+                    'Desafíos y perspectivas futuras.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/661',
+                    pdfDownload: ''
+                },
+                coauthors: ['frida-alvarez-ovando-id']
+            },
+            {
+                id: 'articulo-12',
+                title: 'Predicción de riesgo en sepsis: revisión sistemática sobre la utilidad diagnóstica de escalas clínicas y signos validados',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Este estudio evalúa la precisión y utilidad de diversas escalas y signos clínicos para predecir el riesgo en pacientes con sepsis.',
+                keywords: ['sepsis', 'predicción de riesgo', 'escalas clínicas', 'diagnóstico'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Comparación de escalas de riesgo en sepsis.',
+                    'Identificación de los signos más predictivos.',
+                    'Implicaciones para la intervención temprana.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/662',
+                    pdfDownload: ''
+                },
+                coauthors: ['jessica-guadalupe-vargas-becerril-id']
+            },
+            {
+                id: 'articulo-13',
+                title: 'Del implante a la inflamación: Revisión sistemática del síndrome de ASIA y su validez clínica',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Análisis del síndrome de ASIA (Síndrome Autoinmune/Inflamatorio Inducido por Adyuvantes) y su relación con implantes.',
+                keywords: ['implante', 'inflamación', 'síndrome ASIA', 'autoinmune'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Criterios diagnósticos del síndrome de ASIA.',
+                    'Tipos de implantes asociados.',
+                    'Manejo clínico y pronóstico.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/660',
+                    pdfDownload: ''
+                },
+                coauthors: ['aline-salgado-sanchez-id']
+            },
+            {
+                id: 'articulo-14',
+                title: 'Patrones de Resistencia Antimicrobiana en Infecciones Urinarias Comunitarias: Correlación con el Uso de Antibióticos',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Este estudio investiga la relación entre el uso de antibióticos y el desarrollo de resistencia en infecciones urinarias comunes.',
+                keywords: ['resistencia antimicrobiana', 'infecciones urinarias', 'antibióticos', 'salud pública'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Identificación de patrones de resistencia.',
+                    'Análisis de la influencia del uso de antibióticos.',
+                    'Estrategias para combatir la resistencia.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/674',
+                    pdfDownload: ''
+                },
+                coauthors: ['jessica-guadalupe-vargas-becerril-id']
+            },
+            {
+                id: 'articulo-15',
+                title: 'Microplásticos y Salud Humana: Detección y Correlación con Marcadores de Disfunción Gastrointestinal y Endócrina',
+                authors: 'Equipo Coautores 360',
+                journal: 'Revista VITALIA',
+                year: 2025,
+                abstract: 'Resumen pendiente de agregar. Investigación sobre la presencia de microplásticos en el cuerpo humano y su posible correlación con disfunciones orgánicas.',
+                keywords: ['microplásticos', 'salud humana', 'disfunción gastrointestinal', 'endócrina', 'toxicología'],
+                image: 'https://i.postimg.cc/sDNTj9XR/Logocoautores.png', // Imagen del logo de Coautores 360
+                keyPoints: [
+                    'Métodos de detección de microplásticos.',
+                    'Evidencia de su impacto en sistemas biológicos.',
+                    'Implicaciones para la salud pública y ambiental.'
+                ],
+                links: {
+                    journalPage: 'https://revistavitalia.org/index.php/vitalia/article/view/675',
+                    pdfDownload: ''
+                },
+                coauthors: ['jessica-guadalupe-vargas-becerril-id']
+            }
+        ];
+
+        // Este array será para los coautores. Llena con tus datos.
+        // Asegúrate de que los IDs de los coautores aquí coincidan con los IDs en el array articlesData.
+        const coauthorsData = [
+            {
+                id: 'daniel-sanchez-knupflemacher-id', // ID para Daniel
+                name: 'Daniel Sánchez Knupflemacher',
+                affiliation: 'Universidad Westhill',
+                image: 'https://via.placeholder.com/100?text=DSK', // Placeholder para su foto
+                bio: 'Daniel Sánchez Knupflemacher es un joven innovador, estudiante de medicina, emprendedor científico y líder académico que ha transformado la manera en que los estudiantes acceden a la publicación científica. Con decenas de artículos publicados y una visión clara sobre la democratización del conocimiento, fundó Coautores 360, una iniciativa que ha abierto las puertas de la investigación a cientos de estudiantes sin necesidad de esperar hasta el internado o depender de mentores inaccesibles. Coautores 360 es mucho más que una plataforma de escritura colaborativa: es un movimiento académico que ha permitido a más de 80 estudiantes publicar su primer artículo científico, muchos de ellos en revistas indexadas en bases como Latindex, con temas que van desde medicina interna y cirugía plástica hasta neurociencia y salud pública. Con un enfoque inclusivo, práctico y formativo, Coautores 360 guía a los participantes paso a paso en el proceso de investigación, redacción, revisión por pares y publicación. Gracias a su metodología, universidades como Anáhuac, Westhill y Saint Luke ya forman parte de esta comunidad de coautores en expansión nacional. Daniel y su equipo han demostrado que con visión, ética y colaboración, los estudiantes pueden convertirse en autores y agentes de cambio en el ámbito científico desde una etapa temprana.',
+                externalLinks: {
+                    orcid: 'https://orcid.org/0009-0004-2504-4568',
+                    // researchGate: 'URL_RESEARCHGATE_DANIEL', // Si tiene
+                    // linkedin: 'URL_LINKEDIN_DANIEL' // Si tiene
+                }
+            },
+            {
+                id: 'xavier-antonio-sanchez-garcia-id',
+                name: 'Xavier Antonio Sánchez Garcia',
+                affiliation: 'Hospital Ángeles de Pedregal, Hospital Central Militar',
+                image: 'https://via.placeholder.com/100?text=XASG',
+                bio: 'Resumen biográfico pendiente.',
+                externalLinks: {
+                    orcid: 'https://orcid.org/0009-0000-9401-4603'
+                }
+            },
+            {
+                id: 'jose-antonio-sanchez-lopez-id',
+                name: 'José Antonio Sánchez López',
+                affiliation: 'CMN Siglo XXI IMSS, Hospital De Cardiología',
+                image: 'https://via.placeholder.com/100?text=JASL',
+                bio: 'Resumen biográfico pendiente.',
+                externalLinks: {
+                    orcid: 'https://orcid.org/0009-0005-8010-4890'
+                }
+            },
+            {
+                id: 'aline-salgado-sanchez-id',
+                name: 'Aline Salgado Sánchez',
+                affiliation: 'Universidad Westhill',
+                image: 'https://via.placeholder.com/100?text=ASS',
+                bio: 'Resumen biográfico pendiente.',
+                externalLinks: {
+                    orcid: 'https://orcid.org/0009-0003-5434-9355'
+                }
+            },
+            {
+                id: 'frida-alvarez-ovando-id',
+                name: 'Frida Álvarez Ovando',
+                affiliation: 'Saint Luke',
+                image: 'https://via.placeholder.com/100?text=FAO',
+                bio: 'Resumen biográfico pendiente.',
+                externalLinks: {
+                    orcid: 'https://orcid.org/0009-0006-6430-3563'
+                }
+            },
+            {
+                id: 'jessica-guadalupe-vargas-becerril-id',
+                name: 'Jessica Guadalupe Vargas Becerril',
+                affiliation: 'Universidad Westhill',
+                image: 'https://via.placeholder.com/100?text=JGVB',
+                bio: 'Resumen biográfico pendiente.',
+                externalLinks: {
+                    orcid: 'https://orcid.org/0009-0002-0141-5550'
+                }
+            }
+            // Puedes agregar más coautores aquí
+        ];
+
+        // LÓGICA JAVASCRIPT PARA RENDERIZAR Y FILTRAR (MANIPULACIÓN DEL DOM)
+        // Esta sección contendrá el código para:
+        // 1. Renderizar las tarjetas de artículos y coautores al cargar la página.
+        // 2. Implementar la funcionalidad de búsqueda y filtros.
+        // 3. Abrir y cerrar los modales con los detalles de artículos y coautores.
+        // 4. Manejar el menú hamburguesa para la navegación responsiva.
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const articlesContainer = document.getElementById('articles-container');
+            const coauthorsContainer = document.getElementById('coauthors-container'); // Este contenedor ya no es visible pero se mantiene para la lógica
+            const searchInput = document.getElementById('search-input');
+            const yearFilter = document.getElementById('year-filter');
+            const keywordFilter = document.getElementById('keyword-filter');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.nav-links');
+
+            const articleModal = document.getElementById('article-modal');
+            const coauthorModal = document.getElementById('coauthor-modal');
+            const closeButtons = document.querySelectorAll('.close-button');
+
+            // Función para renderizar las tarjetas de artículos
+            function renderArticles(articlesToRender) {
+                articlesContainer.innerHTML = ''; // Limpiar el contenedor
+                if (articlesToRender.length === 0) {
+                    articlesContainer.innerHTML = '<p>No se encontraron publicaciones que coincidan con los criterios.</p>';
+                    return;
+                }
+                articlesToRender.forEach(article => {
+                    const articleCard = document.createElement('div');
+                    articleCard.classList.add('article-card');
+                    articleCard.dataset.id = article.id; // Almacena el ID para el modal
+
+                    articleCard.innerHTML = `
+                        <img src="${article.image}" alt="${article.title}" class="article-image">
+                        <div class="article-info">
+                            <h3>${article.title}</h3>
+                            <p class="authors">${article.authors}</p>
+                            <p class="journal-year">${article.journal}, ${article.year}</p>
+                            <button class="view-details-button">Ver Detalles</button>
+                        </div>
+                    `;
+                    articlesContainer.appendChild(articleCard);
+                });
+            }
+
+            // Función para renderizar las tarjetas de coautores (se mantiene para la lógica interna aunque la sección no sea visible)
+            function renderCoauthors(coauthorsToRender) {
+                // coauthorsContainer.innerHTML = ''; // No limpiar si no es visible
+                if (coauthorsToRender.length === 0) {
+                    // coauthorsContainer.innerHTML = '<p>No se encontraron coautores.</p>';
+                    return;
+                }
+                coauthorsToRender.forEach(coauthor => {
+                    // La lógica de renderizado de tarjetas de coautores aquí ya no es necesaria para la vista principal
+                    // pero se mantiene la función por si se reutiliza en otro contexto o se decide mostrar en el modal.
+                    // const coauthorCard = document.createElement('div');
+                    // coauthorCard.classList.add('coauthor-card');
+                    // coauthorCard.dataset.id = coauthor.id;
+                    // coauthorsContainer.appendChild(coauthorCard);
+                });
+            }
+
+            // Función para poblar los filtros de año y palabras clave
+            function populateFilters() {
+                const years = [...new Set(articlesData.map(article => article.year))].sort((a, b) => b - a);
+                years.forEach(year => {
+                    const option = document.createElement('option');
+                    option.value = year;
+                    option.textContent = year;
+                    yearFilter.appendChild(option);
+                });
+
+                const keywords = [...new Set(articlesData.flatMap(article => article.keywords))].sort();
+                keywords.forEach(keyword => {
+                    const option = document.createElement('option');
+                    option.value = keyword;
+                    option.textContent = keyword;
+                    keywordFilter.appendChild(option);
+                });
+            }
+
+            // Función para filtrar artículos
+            function filterArticles() {
+                const searchTerm = searchInput.value.toLowerCase();
+                const selectedYear = yearFilter.value;
+                const selectedKeyword = keywordFilter.value;
+
+                const filtered = articlesData.filter(article => {
+                    const matchesSearch = article.title.toLowerCase().includes(searchTerm) ||
+                                          article.authors.toLowerCase().includes(searchTerm) ||
+                                          article.abstract.toLowerCase().includes(searchTerm) ||
+                                          article.keywords.some(k => k.toLowerCase().includes(searchTerm));
+                    const matchesYear = selectedYear === '' || article.year.toString() === selectedYear;
+                    const matchesKeyword = selectedKeyword === '' || article.keywords.includes(selectedKeyword);
+
+                    return matchesSearch && matchesYear && matchesKeyword;
+                });
+                renderArticles(filtered);
+            }
+
+            // Event Listeners para filtros y búsqueda
+            searchInput.addEventListener('input', filterArticles);
+            yearFilter.addEventListener('change', filterArticles);
+            keywordFilter.addEventListener('change', filterArticles);
+
+            // Lógica para abrir el modal de artículo
+            articlesContainer.addEventListener('click', (event) => {
+                const button = event.target.closest('.view-details-button');
+                if (button) {
+                    const articleId = button.closest('.article-card').dataset.id;
+                    const article = articlesData.find(a => a.id === articleId);
+
+                    if (article) {
+                        document.getElementById('modal-article-title').textContent = article.title;
+                        document.getElementById('modal-article-authors').textContent = `Autores: ${article.authors}`;
+                        document.getElementById('modal-article-journal-year').textContent = `${article.journal}, ${article.year}`;
+                        document.getElementById('modal-article-image').src = article.image;
+                        document.getElementById('modal-article-abstract').textContent = article.abstract;
+
+                        const keyPointsList = document.getElementById('modal-article-keypoints');
+                        keyPointsList.innerHTML = '';
+                        article.keyPoints.forEach(point => {
+                            const li = document.createElement('li');
+                            li.textContent = point;
+                            keyPointsList.appendChild(li);
+                        });
+
+                        const linksDiv = document.getElementById('modal-article-links');
+                        linksDiv.innerHTML = '';
+                        for (const key in article.links) {
+                            if (article.links[key]) {
+                                const linkButton = document.createElement('a');
+                                linkButton.href = article.links[key];
+                                linkButton.target = '_blank';
+                                linkButton.classList.add('modal-link-button');
+                                linkButton.textContent = key === 'journalPage' ? 'Ver en Revista' :
+                                                        key === 'pdfDownload' ? 'Descargar PDF' :
+                                                        key === 'researchGate' ? 'ResearchGate' :
+                                                        key === 'dataRepository' ? 'Repositorio de Datos' :
+                                                        key; // Fallback
+                                linksDiv.appendChild(linkButton);
+                            }
+                        }
+
+                        const articleCoauthorsList = document.getElementById('modal-article-coauthors');
+                        articleCoauthorsList.innerHTML = '';
+                        if (article.coauthors && article.coauthors.length > 0) {
+                            article.coauthors.forEach(coauthorId => {
+                                const coauthor = coauthorsData.find(c => c.id === coauthorId);
+                                if (coauthor) {
+                                    const coauthorLink = document.createElement('a');
+                                    coauthorLink.href = '#'; // Esto se manejará con JS para abrir el modal del coautor
+                                    coauthorLink.textContent = coauthor.name;
+                                    coauthorLink.classList.add('modal-coauthor-link');
+                                    coauthorLink.dataset.id = coauthor.id; // Para identificar al coautor
+                                    articleCoauthorsList.appendChild(coauthorLink);
+                                }
+                            });
+                        } else {
+                            articleCoauthorsList.textContent = 'No se especificaron coautores para este artículo.';
+                        }
+
+
+                        articleModal.style.display = 'block';
+                    }
+                }
+            });
+
+            // Lógica para abrir el modal de coautor (puede ser llamado desde el modal de artículo)
+            // Solo añadir el event listener si el elemento existe
+            if (coauthorsContainer) { // Esta verificación asegura que no se intente añadir un listener a un elemento nulo
+                coauthorsContainer.addEventListener('click', (event) => {
+                    const button = event.target.closest('.view-coauthor-button');
+                    if (button) {
+                        const coauthorId = button.closest('.coauthor-card').dataset.id;
+                        const coauthor = coauthorsData.find(c => c.id === coauthorId);
+
+                        if (coauthor) {
+                            document.getElementById('modal-coauthor-image').src = coauthor.image;
+                            document.getElementById('modal-coauthor-name').textContent = coauthor.name;
+                            document.getElementById('modal-coauthor-affiliation').textContent = `Afiliación: ${coauthor.affiliation}`;
+                            document.getElementById('modal-coauthor-bio').textContent = coauthor.bio;
+
+                            const externalLinksDiv = document.getElementById('modal-coauthor-external-links');
+                            externalLinksDiv.innerHTML = '';
+                            for (const key in coauthor.externalLinks) {
+                                if (coauthor.externalLinks[key]) {
+                                    const linkButton = document.createElement('a');
+                                    linkButton.href = coauthor.externalLinks[key];
+                                    linkButton.target = '_blank';
+                                    linkButton.classList.add('modal-link-button');
+                                    linkButton.textContent = key === 'researchGate' ? 'ResearchGate' :
+                                                            key === 'orcid' ? 'ORCID' :
+                                                            key === 'linkedin' ? 'LinkedIn' :
+                                                            key; // Fallback
+                                    externalLinksDiv.appendChild(linkButton);
+                                }
+                            }
+
+                            const coauthorPublicationsList = document.getElementById('modal-coauthor-publications');
+                            coauthorPublicationsList.innerHTML = '';
+                            const publicationsByCoauthor = articlesData.filter(article =>
+                                article.coauthors.includes(coauthor.id)
+                            );
+                            if (publicationsByCoauthor.length > 0) {
+                                publicationsByCoauthor.forEach(article => {
+                                    const li = document.createElement('li');
+                                    const link = document.createElement('a');
+                                    link.href = '#'; // Esto se manejará con JS para abrir el modal del artículo
+                                    link.textContent = article.title;
+                                    link.classList.add('modal-article-link');
+                                    link.dataset.id = article.id; // Para identificar el artículo
+                                    li.appendChild(link);
+                                    coauthorPublicationsList.appendChild(li);
+                                });
+                            } else {
+                                coauthorPublicationsList.textContent = 'No hay publicaciones conjuntas registradas.';
+                            }
+
+                            coauthorModal.style.display = 'block';
+                        }
+                    }
+                });
+            }
+
+
+            // Event listener para cerrar modales
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    articleModal.style.display = 'none';
+                    coauthorModal.style.display = 'none';
+                });
+            });
+
+            // Cerrar modal al hacer clic fuera de él
+            window.addEventListener('click', (event) => {
+                if (event.target === articleModal) {
+                    articleModal.style.display = 'none';
+                }
+                if (event.target === coauthorModal) {
+                    coauthorModal.style.display = 'none';
+                }
+            });
+
+            // Manejar clics en enlaces de coautores dentro del modal de artículo
+            document.getElementById('modal-article-coauthors').addEventListener('click', (event) => {
+                const link = event.target.closest('.modal-coauthor-link');
+                if (link) {
+                    event.preventDefault(); // Evita que el enlace salte a #
+                    const coauthorId = link.dataset.id;
+                    const coauthor = coauthorsData.find(c => c.id === coauthorId);
+                    if (coauthor) {
+                        articleModal.style.display = 'none'; // Cierra el modal de artículo
+                        // Reutiliza la lógica para abrir el modal de coautor
+                        document.getElementById('modal-coauthor-image').src = coauthor.image;
+                        document.getElementById('modal-coauthor-name').textContent = coauthor.name;
+                        document.getElementById('modal-coauthor-affiliation').textContent = `Afiliación: ${coauthor.affiliation}`;
+                        document.getElementById('modal-coauthor-bio').textContent = coauthor.bio;
+
+                        const externalLinksDiv = document.getElementById('modal-coauthor-external-links');
+                        externalLinksDiv.innerHTML = '';
+                        for (const key in coauthor.externalLinks) {
+                            if (coauthor.externalLinks[key]) {
+                                const linkButton = document.createElement('a');
+                                linkButton.href = coauthor.externalLinks[key];
+                                linkButton.target = '_blank';
+                                linkButton.classList.add('modal-link-button');
+                                linkButton.textContent = key === 'researchGate' ? 'ResearchGate' :
+                                                        key === 'orcid' ? 'ORCID' :
+                                                        key === 'linkedin' ? 'LinkedIn' :
+                                                        key;
+                                externalLinksDiv.appendChild(linkButton);
+                            }
+                        }
+
+                        const coauthorPublicationsList = document.getElementById('modal-coauthor-publications');
+                        coauthorPublicationsList.innerHTML = '';
+                        const publicationsByCoauthor = articlesData.filter(article =>
+                            article.coauthors.includes(coauthor.id)
+                        );
+                        if (publicationsByCoauthor.length > 0) {
+                            publicationsByCoauthor.forEach(article => {
+                                const li = document.createElement('li');
+                                const link = document.createElement('a');
+                                link.href = '#';
+                                link.textContent = article.title;
+                                link.classList.add('modal-article-link');
+                                link.dataset.id = article.id;
+                                li.appendChild(link);
+                                coauthorPublicationsList.appendChild(li);
+                            });
+                        } else {
+                            articleCoauthorsList.textContent = 'No hay publicaciones conjuntas registradas.';
+                        }
+
+                        coauthorModal.style.display = 'block';
+                    }
+                }
+            });
+
+            // Manejar clics en enlaces de artículos dentro del modal de coautor
+            document.getElementById('modal-coauthor-publications').addEventListener('click', (event) => {
+                const link = event.target.closest('.modal-article-link');
+                if (link) {
+                    event.preventDefault();
+                    const articleId = link.dataset.id;
+                    const article = articlesData.find(a => a.id === articleId);
+                    if (article) {
+                        coauthorModal.style.display = 'none'; // Cierra el modal de coautor
+                        // Reutiliza la lógica para abrir el modal de artículo
+                        document.getElementById('modal-article-title').textContent = article.title;
+                        document.getElementById('modal-article-authors').textContent = `Autores: ${article.authors}`;
+                        document.getElementById('modal-article-journal-year').textContent = `${article.journal}, ${article.year}`;
+                        document.getElementById('modal-article-image').src = article.image;
+                        document.getElementById('modal-article-abstract').textContent = article.abstract;
+
+                        const keyPointsList = document.getElementById('modal-article-keypoints');
+                        keyPointsList.innerHTML = '';
+                        article.keyPoints.forEach(point => {
+                            const li = document.createElement('li');
+                            li.textContent = point;
+                            keyPointsList.appendChild(li);
+                        });
+
+                        const linksDiv = document.getElementById('modal-article-links');
+                        linksDiv.innerHTML = '';
+                        for (const key in article.links) {
+                            if (article.links[key]) {
+                                const linkButton = document.createElement('a');
+                                linkButton.href = article.links[key];
+                                linkButton.target = '_blank';
+                                linkButton.classList.add('modal-link-button');
+                                linkButton.textContent = key === 'journalPage' ? 'Ver en Revista' :
+                                                        key === 'pdfDownload' ? 'Descargar PDF' :
+                                                        key === 'researchGate' ? 'ResearchGate' :
+                                                        key === 'dataRepository' ? 'Repositorio de Datos' :
+                                                        key;
+                                linksDiv.appendChild(linkButton);
+                            }
+                        }
+
+                        const articleCoauthorsList = document.getElementById('modal-article-coauthors');
+                        articleCoauthorsList.innerHTML = '';
+                        if (article.coauthors && article.coauthors.length > 0) {
+                            article.coauthors.forEach(coauthorId => {
+                                const coauthor = coauthorsData.find(c => c.id === coauthorId);
+                                if (coauthor) {
+                                    const coauthorLink = document.createElement('a');
+                                    coauthorLink.href = '#';
+                                    coauthorLink.textContent = coauthor.name;
+                                    coauthorLink.classList.add('modal-coauthor-link');
+                                    coauthorLink.dataset.id = coauthor.id;
+                                    articleCoauthorsList.appendChild(coauthorLink);
+                                }
+                            });
+                        } else {
+                            articleCoauthorsList.textContent = 'No se especificaron coautores para este artículo.';
+                        }
+
+                        articleModal.style.display = 'block';
+                    }
+                }
+            });
+
+
+            // Lógica para el menú hamburguesa
+            mobileMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Cargar datos iniciales al cargar la página
+            populateFilters();
+            renderArticles(articlesData);
+            // renderCoauthors(coauthorsData); // No llamar a renderCoauthors si la sección no es visible
+        });
+    </script>
+
+    <!-- Estilos CSS básicos (pueden ser movidos a style.css) -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+        :root {
+            --primary-color: #0056b3; /* Azul oscuro */
+            --secondary-color: #007bff; /* Azul brillante */
+            --text-color: #333;
+            --light-gray: #f4f4f4;
+            --border-color: #ddd;
+            --card-bg: #fff;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-medium: rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: var(--light-gray);
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px var(--shadow-light);
+        }
+
+        .navbar .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .navbar .nav-links {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .navbar .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            padding: 0.5rem 0;
+        }
+
+        .navbar .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle .bar {
+            height: 3px;
+            width: 25px;
+            background-color: white;
+            margin: 4px 0;
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0, 86, 179, 0.8), rgba(0, 86, 179, 0.6)); /* Eliminado el texto del fondo */
+            color: white;
+            text-align: center;
+            padding: 8rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 500px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 6px var(--shadow-light);
+        }
+
+        .button:hover {
+            background-color: #0069d9;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px var(--shadow-medium);
+        }
+
+        /* General Section Styling */
+        .section-padding {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            margin: 1rem auto 0;
+            border-radius: 2px;
+        }
+
+        /* Filter Controls */
+        .filter-controls {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .filter-controls input,
+        .filter-controls select {
+            padding: 0.8rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+            flex: 1;
+            min-width: 200px;
+            max-width: 300px;
+        }
+
+        /* Article Cards */
+        .articles-container,
+        .coauthors-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            justify-content: center;
+        }
+
+        .article-card,
+        .coauthor-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .article-card:hover,
+        .coauthor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--shadow-medium);
+        }
+
+        .article-card .article-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .article-card .article-info,
+        .coauthor-card .coauthor-info {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .article-card h3,
+        .coauthor-card h3 {
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+            line-height: 1.3;
+        }
+
+        .article-card .authors,
+        .article-card .journal-year,
+        .coauthor-card .affiliation {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .article-card .view-details-button,
+        .coauthor-card .view-coauthor-button {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: auto; /* Empuja el botón hacia abajo */
+            align-self: flex-start; /* Alinea el botón a la izquierda */
+            transition: background-color 0.3s ease;
+        }
+
+        .article-card .view-details-button:hover,
+        .coauthor-card .view-coauthor-button:hover {
+            background-color: #0069d9;
+        }
+
+        /* Coauthor Cards */
+        .coauthor-card .coauthor-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 1.5rem auto 1rem;
+            border: 3px solid var(--secondary-color);
+            display: block;
+        }
+
+        .coauthor-card .coauthor-info {
+            text-align: center;
+        }
+
+        /* About Section */
+        .about-me {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            box-shadow: 0 4px 15px var(--shadow-light);
+            padding: 2.5rem;
+            margin-top: 3rem;
+            text-align: center;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-me .profile-picture {
+            /* Eliminado el estilo de borde-radius y border para que no sea un óvalo */
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 1.5rem;
+        }
+
+        .about-me h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .about-me p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .about-me .social-links a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin: 0 0.8rem;
+            transition: color 0.3s ease;
+        }
+
+        .about-me .social-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+
+        footer .social-links-footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links-footer a:hover {
+            color: var(--secondary-color);
+        }
+
+        /* Modals */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1001; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: var(--card-bg);
+            margin: 5% auto; /* 5% from the top and centered */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px var(--shadow-medium);
+            max-width: 900px;
+            width: 90%;
+            position: relative;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .close-button {
+            color: #aaa;
+            font-size: 30px;
+            font-weight: bold;
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .modal-content h3 {
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content h4 {
+            color: var(--secondary-color);
+            font-size: 1.3rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .modal-content p {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .modal-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 8px; /* Esquinas ligeramente redondeadas */
+            object-fit: cover;
+            margin: 0 auto 1.5rem;
+            display: block;
+            border: none; /* Eliminado el borde de color */
+        }
+
+        .modal-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-link-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+
+        .modal-link-button:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .modal-coauthors-list a,
+        .modal-article-link {
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .modal-coauthors-list a:hover,
+        .modal-article-link:hover {
+            color: var(--primary-color);
+            text-decoration: underline;
+        }
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .navbar .nav-links {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: var(--primary-color);
+                position: absolute;
+                top: 70px; /* Ajustar según la altura del header */
+                left: 0;
+                padding: 1rem 0;
+                box-shadow: 0 2px 5px var(--shadow-light);
+            }
+
+            .navbar .nav-links.active {
+                display: flex;
+            }
+
+            .navbar .nav-links li {
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .hero-section {
+                padding: 6rem 1rem;
+            }
+
+            .hero-section h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-section p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+            }
+
+            .section-padding {
+                padding: 3rem 1rem;
+            }
+
+            .filter-controls {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filter-controls input,
+                .filter-controls select {
+                width: 100%;
+                max-width: 400px; /* Limitar el ancho en pantallas pequeñas */
+            }
+
+            .article-card,
+            .coauthor-card {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .modal-content {
+                width: 95%;
+                margin: 20px auto;
+                padding: 20px;
+            }
+
+            .modal-content h3 {
+                font-size: 1.5rem;
+            }
+
+            .modal-content h4 {
+                font-size: 1.1rem;
+            }
+
+            .modal-links {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar {
+                padding: 0.8rem 1rem;
+            }
+            .navbar .logo {
+                font-size: 1.5rem;
+            }
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+            .hero-section p {
+                font-size: 0.9rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+            .article-card .article-info,
+            .coauthor-card .coauthor-info {
+                padding: 1rem;
+            }
+            .article-card h3,
+            .coauthor-card h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+
+</body>
+</html>
